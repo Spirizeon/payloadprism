@@ -1,0 +1,24 @@
+{
+  "sample_name": "ransomware_test.exe",
+  "timestamp": "2025-04-17T10:22:00Z",
+  "processes": [
+    {"pid": 1234, "name": "ransomware_test.exe", "behavior": "creates mutex"},
+    {"pid": 1235, "name": "cmd.exe", "behavior": "runs PowerShell script"}
+  ],
+  "network": [
+    {"domain": "malicious.example.com", "ip": "192.168.1.10", "port": 443}
+  ],
+  "file_operations": [
+    {"action": "delete", "file": "C:/Users/Ayush/Documents/important.docx"},
+    {"action": "write", "file": "C:/ransom_note.txt"}
+  ],
+  "registry": [
+    {"key": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run", "value": "ransomware_test.exe"}
+  ],
+  "iocs": {
+    "domains": ["malicious.example.com"],
+    "ips": ["192.168.1.10"],
+    "file_paths": ["C:/ransom_note.txt"]
+  }
+}
+
