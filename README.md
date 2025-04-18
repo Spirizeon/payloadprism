@@ -2,7 +2,6 @@
 
 # 🛡️ Payload Prism
 
-> Lightweight, AI-powered malware verdict engine with a touch of blockchain integrity.
 
 ---
 
